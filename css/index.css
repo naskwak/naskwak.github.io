@@ -1,0 +1,238 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+@font-face {
+  font-family: "Block Berthold";
+  src: url("../res/fnts/blockberthold.otf");
+}
+p {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@keyframes MOVE-BG {
+  from {
+    background-position: 0 0;
+  }
+/*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -500vw -300vh;
+  }
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  background: url("../res/imgs/sparkling-sea.JPG");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 100vw 100vh;
+  /* background-size: auto 100%; */
+/*adjust s value for speed*/
+  animation: MOVE-BG 100s linear infinite;
+}
+
+body {
+  
+  /* background: url("../res/imgs/chill-guy.jpeg"); */
+  /* background-size:contain; */
+  /* background-color: #072AC8; */
+  color: #072AC8;
+  font-family: Block Berthold;
+  margin:0;
+  /* display:grid;
+  grid-template-areas:
+    "everything-else vertical-text"
+  ; */
+  /* #vertical-text{grid-area:vertical-text;} */
+}
+
+#head-body{grid-area:everything-else;}
+
+/*   
+  #vertical-text p{
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+  } */
+
+/**************************[ HEADER ]**************************/
+
+.header {
+  background-color:#FFC600;
+  text-align: center;
+  border: 1vw, none, #072AC8;
+  border-style:double;
+  
+  /* color:#FFC600; */
+  /* display:grid; */
+
+  width:78vw;
+  margin:2vw 10% 0;
+}
+
+.header img {
+  max-width:100%;
+}
+
+.container#title-graphic{
+  text-align: justify;;
+  grid-template-areas:
+    "left text right"
+  ;
+  display:grid;
+}
+
+#title-left {grid-area:left;
+  display:grid;
+  /* float: */
+}
+#title-right {grid-area:right;
+  display:grid;  
+  margin: 0 0 0 auto;
+  /* color:green; */
+}
+
+#title-text {grid-area:text; /* ALL MY LIFE */
+  font-size:%;
+  /* font-family:Arial, Helvetica, sans-serif; */
+  /* background-color: white; */
+}
+
+#neocities-row {
+  /* flex-wrap: nowrap; */
+  /* display:inline-flex; */
+}
+
+.buttonz {
+  width:88px;
+  height:31px;
+  margin:0px;
+}
+
+.header #page-subtitle{
+  /* font-stretch:condensed; */
+  margin:0;
+  font-size:31px;
+}
+
+.header #page-title{
+  font-size: 400%;
+  margin:0;
+  position:static;
+  /* font-stretch: semi-condensed; */
+  /* margin-left:auto;
+  margin-right:auto; */
+
+}
+
+/**************************[ CONTENT BODY ]**************************/
+
+#content-body /*GRID-CONTAINER*/ {
+  display:grid;
+  grid-template-areas:
+    "left center right"
+  ;
+  padding:1.5vw 10vw 50px;
+  /* grid-column: ; */
+}
+
+#content-body > .container-column {
+  width:100%;
+}
+
+/**************************[ CONTAINER COLUMNS ]**************************/
+
+.container-column {
+  background:white;
+  border: 1vw, none, #072AC8;
+  border-style:double;
+  /* margin:0 left 0; */
+  /* padding:10px; */
+  
+  /* text-wrap:wrap; */
+  display:grid;
+  text-align: justify;
+  min-width:18vw;
+  max-width:18vw;
+}
+
+.container-column p {
+  /* color:red; */
+  color:hsl(229, 91%, 71%);
+  padding:0px 40px 0px;
+}
+
+.container-column h1 {
+  padding:0px 30px 0px;
+}
+
+.container-column h4 {
+  padding:0px 35px 0px;
+}
+
+/**************************[ LEFT COLUMN CONTENT ]**************************/
+#welcome {
+  /* background-color:blue; */
+}
+#log {
+  border-top:solid #072AC8;
+  border-bottom:solid #072AC8;
+  background-color: #A2D6F9;
+}
+
+
+/**************************[ CENTER COLUMN CONTENT ]**************************/
+
+/**************************[ RIGHT COLUMN CONTENT ]**************************/
+
+/* MAIN CONTENT GRID SYSTEM */
+/* children of .container-column */
+.left {grid-area:left;
+  background-color: #A2D6F9;
+}
+.center {grid-area:center;
+  min-width:38vw;
+  max-width:38vw;
+  /* font-size: ; */
+}
+.right {grid-area:right;
+  /* max-width:25%; */
+}
+
+
+
+/* RESPONSIVE CSS */
+@media only screen and (max-width: 800px) {
+
+  .header {
+    width:98vw;
+    margin:0vw 0% 0;
+  }
+
+   #content-body {
+    padding:0 0% 50px;
+   }
+   .container-column {
+    min-width:21vw;
+    max-width:21vw;
+  }
+
+  /* MAIN CONTENT GRID SYSTEM */
+  /* children of .container-column */
+  .left {grid-area:left;
+    background-color: #A2D6F9;
+  }
+  .center {grid-area:center;
+    min-width:46vw;
+    max-width:46vw;
+    /* font-size: ; */
+  }
+  .right {grid-area:right;
+    /* max-width:25%; */
+  }
+}
+
