@@ -27,7 +27,8 @@ p {
   z-index: -10;
   top: 0;
   left: 0;
-  background: url("../res/imgs/sparkling-sea.JPG");
+  background-color: #072AC8;
+  /* background: url("../res/imgs/sparkling-sea.JPG"); */
   background-repeat: repeat;
   background-position: 0 0;
   background-size: 100vw 100vh;
@@ -64,14 +65,14 @@ body {
 .header {
   background-color:#FFC600;
   text-align: center;
-  border: 1vw, none, #072AC8;
+  border: 5px, none, #072AC8;
   border-style:double;
   
   /* color:#FFC600; */
   /* display:grid; */
 
-  width:78vw;
-  margin:2vw 10% 0;
+  width:80%;
+  margin:2% 10% 0;
 }
 
 .header img {
@@ -136,7 +137,7 @@ body {
   grid-template-areas:
     "left center right"
   ;
-  padding:1.5vw 10vw 50px;
+  padding:1.5% 10vw 50px;
   /* grid-column: ; */
 }
 
@@ -148,16 +149,17 @@ body {
 
 .container-column {
   background:white;
-  border: 1vw, none, #072AC8;
-  border-style:double;
+  border: 5px, none, #FFC600;
+  border-style:dotted;
   /* margin:0 left 0; */
   /* padding:10px; */
   
   /* text-wrap:wrap; */
   display:grid;
   text-align: justify;
-  min-width:18vw;
-  max-width:18vw;
+  min-width:20%;
+  
+  /* max-width:100%; */
 }
 
 .container-column p {
@@ -172,6 +174,10 @@ body {
 
 .container-column h4 {
   padding:0px 35px 0px;
+}
+
+.container-column img {
+  width:100%;
 }
 
 /**************************[ LEFT COLUMN CONTENT ]**************************/
@@ -193,14 +199,16 @@ body {
 /* children of .container-column */
 .left {grid-area:left;
   background-color: #A2D6F9;
+  /* min-width:20%; */
 }
 .center {grid-area:center;
-  min-width:38vw;
-  max-width:38vw;
+  min-width:40%;
+  
+  /* max-width:40%; */
   /* font-size: ; */
 }
 .right {grid-area:right;
-  /* max-width:25%; */
+  /* min-width:20%; */
 }
 
 
