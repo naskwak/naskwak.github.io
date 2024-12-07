@@ -126,12 +126,13 @@ img#title-center{grid-area:title-center; /* THRICE-UPON-A-TIME */
   border-bottom:#072AC8 solid 1px;
   background-color:beige;
 }
-
+/* #neocities-row > .container {
+  margin-right:100px;
+} */
 .buttonz {
   /* width:88px; */
   height:31px;
   margin:0px;
-  
 }
 
 .header #page-subtitle{
