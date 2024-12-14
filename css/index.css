@@ -56,11 +56,11 @@ body {
 
 #head-body{grid-area:everything-else;}
 
-/*   
-  #vertical-text p{
-    writing-mode: vertical-rl;
-    text-orientation: sideways;
-  } */
+#background-source {
+  color:white;
+  font-size:40pt;
+  /* margin:0 auto 0; */
+}
 
 /**************************[ HEADER ]**************************/
 
