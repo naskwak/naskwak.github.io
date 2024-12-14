@@ -131,7 +131,7 @@ img#title-center{
 }
 
 #neocities-row {
-  padding:8px 0 6px;
+  
   border-top:#072AC8 dotted 1px;
   border-bottom:#072AC8 solid 1px;
   background-color:beige;
@@ -140,7 +140,8 @@ img#title-center{
   margin-right:100px;
 } */
 .buttonz {
-  /* width:88px; */
+  /* width:auto; */
+  padding:8px 0 6px;
   height:31px;
   margin:0px;
 }
@@ -226,6 +227,12 @@ img#title-center{
 }
 
 /**************************[ LEFT COLUMN CONTENT ]**************************/
+#navigation ul{
+  list-style:none;
+}
+
+
+/**************************[ CENTER COLUMN CONTENT ]**************************/
 #welcome {
   /* background-color:blue; */
   /* box-shadow: 0px 0px 10px 1px white; */
@@ -240,9 +247,6 @@ img#title-center{
   background-color: #F3F0CC;
   
 }
-
-
-/**************************[ CENTER COLUMN CONTENT ]**************************/
 
 /**************************[ RIGHT COLUMN CONTENT ]**************************/
 h3#status-note {
@@ -292,6 +296,90 @@ h3#status-note {
   padding:0 5% 0;
 }
 
+#image-grid {
+  display:grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  grid-template-rows: 40% 40%;
+  grid-template-columns: 40% 40%;
+  padding: 10px;
+  /* display:flex; */
+}
+
+#gallery {
+  border-top:dotted #072AC8;
+  border-bottom:solid #072AC8;
+  background-color:#A2D6F9;
+}
+
+#gallery img {
+  /* margin:5% 5% 5%; */
+  /* display:flex; */
+  /* flex:1; */
+  border:black solid 2px
+}
+
+/**************************[ AFTER CONTENT-BODY ]**************************/
+#filler-space {
+  height:300px;
+}
+
+footer {
+  border-top:#FFC600 2px solid;
+  background-color:#072AC8;
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  height:100%;
+  padding:70px;
+}
+
+.highlight {
+  border-radius:5px;
+  display: inline-block;
+  padding: .25em 5px 5px;
+  background: white;
+  /* color: #black; */
+}
+
+#footer-grid{
+  display:grid;
+  grid-template-areas:
+    "brand contact message";
+  width:100%;
+  grid-gap:20px;
+  
+}
+
+footer h2{
+  padding:0;
+  margin:0;
+}
+
+.footer-column li {
+  list-style: none;
+}
+
+#contact {grid-area:contact;
+  /* background-color:white; */
+
+}
+
+#message {grid-area:message;
+  width:400px;
+  /* background-color:red; */
+}
+
+#brand {grid-area:brand;
+  /* background-color:black; */
+  
+}
+
+#faux-copyright {
+  text-align:center;
+  
+  color:#FFC600;
+}
+
 
 
 /**************************[ RESPONSIVE CSS ]**************************/
@@ -331,6 +419,12 @@ h3#status-note {
   }
   .right {grid-area:right;
     /* max-width:25%; */
+  }
+  #filler-space {
+    display:none;
+  }
+  footer {
+    display:none;
   }
 }
 
