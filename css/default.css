@@ -267,15 +267,15 @@ h3#status-note {
   width:30px;
   height:30px;
 }
-#adspace {
+#a-space {
   /* background-color:black; */
 }
 
-#adspace > #first-row {
+#a-space > #first-row {
   display:flex;
 }
 
-#adspace > #first-row > img {
+#a-space > #first-row > img {
   float:right;
   
   min-width:48%;
@@ -289,7 +289,7 @@ h3#status-note {
   padding:0 0 0;
 }
 
-#adspace > a{
+#a-space > a{
   font-family:Arial, Helvetica, sans-serif;
   float:right;
   text-decoration: underline;
