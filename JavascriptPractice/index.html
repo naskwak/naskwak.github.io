@@ -1,0 +1,64 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cyberpunk Dice Roller</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet"" href="style.css">
+    </head>
+    <body>
+        
+        <h1>Dice Roller</h1>
+        <fieldset>
+            <label for="diceNum"># of Dice:</label>
+            <br>
+            <input id="diceNum" type="number" min="0" max="999" value="1">
+
+            <br>
+            <br>
+             
+            <label for="diceType">Dice Type:</label>
+            <br>
+            <input id="diceType" type="number" min="0" max="999" value="6">
+
+            <br><br>
+
+            <label for="diceMod">Modifier:</label>
+            <br>
+            <input id="diceMod" type="number" min="0" max="999" value="0">
+
+            <!-- <input type="radio" id="diceType" name="diceType" value="4"
+            onclick="updateType(4)">
+            <label for="diceType">d4</label>
+            <input type="radio" id="diceType" name="diceType" value="6"
+            onclick="updateType(6)">
+            <label for="diceType">d6</label>
+            <input type="radio" id="diceType" name="diceType" value="8"
+            onclick="updateType(8)">
+            <label for="diceType">d8</label>
+            <input type="radio" id="diceType" name="diceType" value="10"
+            onclick="updateType(10)">
+            <label for="diceType">d10</label>
+            <input type="radio" id="diceType" name="diceType" value="12"
+            onclick="updateType(12)">
+            <label for="diceType">d12</label>
+            <input type="radio" id="diceType" name="diceType" value="20"
+            onclick="updateType(20)">
+            <label for="diceType" onclick="updateType(20)">d20</label> -->
+
+            <p id="diceRoll"></p>
+            <input type="button" onclick="calculateRoll();" value="Roll">
+
+            <!-- <hr> -->
+        </fieldset>
+
+        <p id="rollOutput">
+
+        </p>
+        <input type="button" onclick="calculateRoll();" value="Roll">
+            <!-- <hr> -->
+        
+        <script src="script.js">
+                
+        </script>
+    </body>
+</html>
