@@ -5,60 +5,79 @@ let diceNum = 1;
 let diceType = 6;
 let diceMod = 0;
 let diceRoll = `${diceNum}D${diceType}`;
+calculateRoll();
 // $("#diceRoll").text(diceRoll);
+
 function calculateRoll(){
-    let max = diceNum * diceType;
-    let min = diceType;
-    // let randomNum = Math.random() * ()-;
-    $("#rollOutput").append(`${diceRoll}: (${diceNum}-${max}) `);
+    let totalMax = diceNum * diceType + parseInt(diceMod);
+    let totalMin = parseInt(diceNum) + parseInt(diceMod);
+    
+    let rollMessage = `
+        
+            <li>
+                ${diceRoll}, (${totalMin}-${totalMax}): \n 
+            </li>
+        `;
 
     let totalRoll = 0;
-    for (let i = 0; i < diceNum; i++){
-        
-        let roll = Math.round(Math.random() * (diceType-1) + 1);
-        $("#rollOutput").append(`${roll} \n`);
-        totalRoll+=roll;
-    }
-    $("#rollOutput").append(`<br>`);
-    // console.log("Dice Num:" + diceNum);
-    // console.log("Dice Num:" + diceType);
     
-    $("#rollOutput").append(`= <span style="color:red;">${totalRoll}</span> <br>`);
+    for (let i = 0; i < diceNum; i++){
+        // let max = diceType + parseInt(diceMod);
+        // let min = diceNum + parseInt(diceMod);
+        let roll = Math.round(Math.random() * (diceType-1) + 1);
+        if ($(diceMod) !== 0){
+            let rollModded = roll + parseInt(diceMod);
+            rollMessage+=`
+                <li> 
+                    ${roll}(${rollModded}) \n
+                </li>`;
+            totalRoll+=rollModded;
+        }else{
+            rollMessage += `
+                <li>
+                    ${roll} \n
+                </li>
+                `;
+            totalRoll+=roll;
+        }
+        
+    }
+    rollMessage += `<span style="color:red;">= ${totalRoll}</span> `;
+
+    $("#diceRoll").html(`${diceRoll}<br>= <span style="color:red;">${totalRoll}</span> <br>`);
+    
+    
+    $("#rollLogs").prepend(`<ul class="log">${rollMessage}</ul><hr>`);
+    // <li class="line">
+    //         <span style="color:red;">= ${totalRoll}</span> 
+    //     </li></ui>`
 }
+
+// Event Listeners
 $(document).ready(function(){
     $("#diceNum").on('change', function() {
         diceNum = $("#diceNum").val();
-        diceRoll = `${diceNum}D${diceType}`;
-        $("#diceRoll").text(diceRoll);
+        checkForMod();
     });
     $("#diceType").on('change', function() {
         diceType = $("#diceType").val();
-        diceRoll = `${diceNum}D${diceType}`;
-        $("#diceRoll").text(diceRoll);
+        checkForMod();
     });
     $("#diceMod").on('change', function() {
         diceMod = $("#diceMod").val();
-        diceRoll = `${diceNum}D${diceType}`;
-        $("#diceRoll").text(diceRoll);
+        checkForMod();
+        
     });
 })
 
-// function updateNum(dNum){
-//     diceNum = dNum;
-//     diceRoll = `${diceNum}D${diceType}`;
-//     $("#diceRoll").text(diceRoll);
-//     console.log(`Dice Roll: ${diceRoll}`);
-// }
-// function updateType(dType){
-//     diceType = dType;
-//     diceRoll = `${diceNum}D${diceType}`;
-//     $("#diceRoll").text(diceRoll);
-//     console.log(`Dice Roll: ${diceRoll}`);
-
-//     // $("#typeIndex").text(diceType);
-//     // console.log(diceType);
-    
-//     // alert(diceType);
-// }
-
+// Determines whether to display Modifier
+function checkForMod(){
+    if (diceMod == 0 ){
+            diceRoll = `${diceNum}D${diceType}`;
+            $("#diceRoll").text(diceRoll);
+        }else{
+            diceRoll = `${diceNum}D${diceType} + ${diceMod}`;
+            $("#diceRoll").text(diceRoll);
+        }
+}
 
