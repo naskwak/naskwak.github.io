@@ -1,23 +1,32 @@
 
 // console.log($("h1").text());
 
-let diceNum = 1;
-let diceType = 6;
+let diceNum = $("#diceNum").val();
+let diceType = $("#diceType").val();
 let diceMod = 0;
 let diceRoll = `${diceNum}D${diceType}`;
+
 calculateRoll();
 // $("#diceRoll").text(diceRoll);
 
 function calculateRoll(){
-    let totalMax = diceNum * diceType + parseInt(diceMod);
-    let totalMin = parseInt(diceNum) + parseInt(diceMod);
+    let totalMin = parseInt(diceNum);
+    let totalMax = parseInt(diceNum) * parseInt(diceType);
+
+    if (diceMod !== 0){
+        totalMin *= (1 + parseInt(diceMod));
+        totalMax = (parseInt(diceType) + parseInt(diceMod)) * parseInt(diceNum);
+    }
+    else{
+        totalMin = parseInt(diceNum);
+        totalMax = (parseInt(diceNum) * parseInt(diceType));
+    }
     
     let rollMessage = `
-        
             <li>
                 ${diceRoll}, (${totalMin}-${totalMax}): \n 
             </li>
-        `;
+    `;
 
     let totalRoll = 0;
     
@@ -40,7 +49,6 @@ function calculateRoll(){
                 `;
             totalRoll+=roll;
         }
-        
     }
     rollMessage += `<span style="color:red;">= ${totalRoll}</span> `;
 
@@ -80,4 +88,3 @@ function checkForMod(){
             $("#diceRoll").text(diceRoll);
         }
 }
-
