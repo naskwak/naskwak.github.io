@@ -1,13 +1,11 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
-
 @font-face {
   font-family: "Block Berthold";
   src: url("../res/fnts/blockberthold.otf");
 }
+
 p {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Arial Narrow', Arial, sans-serif;
+  text-wrap:wrap;
 }
 
 @keyframes MOVE-BG {
@@ -20,32 +18,19 @@ p {
   }
 }
 
-.bg {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -10;
-  top: 0;
-  left: 0;
+body {
   background-color: #072AC8;
-  background: url("../res/imgs/sparkling-sea.JPG");
+  background: url("../res/imgs/sparkling-sea-red.jpg");
   background-attachment: fixed;
-  animation: MOVE-BG 100s linear infinite;
+  animation: MOVE-BG 600s linear infinite;
   background-repeat: repeat;
   background-position: 0 0;
   background-size: 100vw 100vh;
-  /* background-size: auto 100%; */
-/*adjust s value for speed*/
-  
-}
-
-body {
-  
   /* background: url("../res/imgs/chill-guy.jpeg"); */
   /* background-size:contain; */
   /* background-color: #072AC8; */
   color: #072AC8;
-  font-family: Block Berthold;
+  font-family: "VT323", monospace;
   margin:0;
   /* display:grid;
   grid-template-areas:
@@ -54,7 +39,6 @@ body {
   /* #vertical-text{grid-area:vertical-text;} */
 }
 
-#head-body{grid-area:everything-else;}
 
 #background-source {
   color:white;
@@ -64,50 +48,37 @@ body {
 
 /**************************[ HEADER ]**************************/
 
-.header {
+header {
   border-radius:10px;
   background-color:#FFC600;
   text-align: center;
   border: 5px, none, #072AC8;
   border-style:double;
   
-  /* color:#FFC600; */
-  /* display:grid; */
 
-  /* width:80%; */
-  /* height:100%; */
-  /* height:100%; */
   margin:2% 10vw 0;
 }
 
 #title-graphic > img {
   width:100%;
-  /* height:auto; */
-  /* max-width:100%; */
 }
 
-.container#title-graphic{
+#title-graphic{
   text-align: justify;;
   grid-template-areas:
     "title-left title-center title-center title-right"
   ;
   display:grid;
   width:100%;
-  /* height:250px; */
-  /* height:20%; */
-  /* max-height:20%; */
 }
 
 #title-left {grid-area:title-left;
-  /* display:grid; */
-  /* height:100%; */
-  /* float: */
+
 }
 #title-right {grid-area:title-right;
-  /* display:grid;   */
-  /* height:100%; */
+
+
   margin: 0 0 0 auto;
-  /* color:green; */
 }
 
 #title-center{grid-area:title-center;
@@ -117,17 +88,7 @@ body {
   height:100%;
 }
 img#title-center{
-  /* grid-area:title-center; THRICE-UPON-A-TIME */
-  /* background-color: red; */
-  /* max-height:100%; */
-  /* margin:0 auto 0;
-  width:100%; */
   height:21vw;
-  /* height:100%; */
-  /* object-fit:fill; */
-  /* font-size:2.3vw; */
-  /* font-family:Arial, Helvetica, sans-serif; */
-  /* background-color: white; */
 }
 
 #neocities-row {
@@ -136,11 +97,8 @@ img#title-center{
   border-bottom:#072AC8 solid 1px;
   background-color:beige;
 }
-/* #neocities-row > .container {
-  margin-right:100px;
-} */
+
 .buttonz {
-  /* width:auto; */
   padding:8px 0 6px;
   height:31px;
   margin:0px;
@@ -148,48 +106,39 @@ img#title-center{
 
 /**************************[ CONTENT BODY ]**************************/
 
-#content-body /*GRID-CONTAINER*/ {
+main /*GRID-CONTAINER*/ {
   display:grid;
   grid-template-areas:
     "left left center center center right right"
   ;
-  /* width:80vw; */
+ 
+
   margin:1.5% 10vw 50px;
-  /* margin:2% 10% 0; */
-  /* grid-column: ; */
+
   box-shadow: 0px 0px 10px 1px white;
   
 }
 
-#content-body > .container-column {
-  /* width:100%; */
-  /* border-radius:10px; */
-}
 
-/**************************[ CONTAINER COLUMNS ]**************************/
+/**************************[ SECTION? COLUMNS ]**************************/
 
 .container-column {
   
   background:white;
-  /* border: 5px, dotted, #FFC600; */
   
-  /* border-style:dotted; */
-  /* margin:0 left 0; */
-  /* padding:10px; */
-  
-  /* text-wrap:wrap; */
-  display:grid;
-  
-  /* min-width:20%; */
-  /* width:20%; */
-  
-  /* max-width:100%; */
+  display:flex;
+  flex-flow:column;
+  /* align-items: center;
+  justify-items: center; */
+  /* padding: 0 40px 0; */
+  /* background-color:blue; */
 }
 
 .container-column p {
-  /* color:red; */
   color:hsl(229, 91%, 71%);
-  padding:0px 40px 0px;
+  /* width:100%; */
+  margin:0px 40px 0px;
+  /* background-color:red; */
 }
 
 .container-column h1, h2 {
@@ -207,18 +156,13 @@ img#title-center{
 /* MAIN CONTENT GRID SYSTEM */
 /* children of .container-column */
 .container-column.left {grid-area:left;
-  /* column-width:; */
+
   padding: 7px 0 0;
   background-color: #A2D6F9;
   min-width:100%;
-  /* width:20%; */
 }
 .container-column.center {grid-area:center;
   min-width:100%;
-  /* width:40%; */
-  
-  /* max-width:40%; */
-  /* font-size: ; */
 }
 .container-column.right {grid-area:right;
   min-width:100%;
@@ -234,8 +178,6 @@ img#title-center{
 
 /**************************[ CENTER COLUMN CONTENT ]**************************/
 #welcome {
-  /* background-color:blue; */
-  /* box-shadow: 0px 0px 10px 1px white; */
 }
 
 #welcome h1 {
@@ -255,7 +197,6 @@ h3#status-note {
   padding:10px 10px 10px;
   margin-left:10px;
   color:black;
-  /* margin:20px 40px 10px; */
   background-color:#A2D6F9;
   display:flex;
   justify-content:space-between;
@@ -263,7 +204,6 @@ h3#status-note {
   
 }
 #status-note img {
-  /* margin-right:0px; */
   width:30px;
   height:30px;
 }
@@ -281,10 +221,6 @@ h3#status-note {
   min-width:48%;
   max-width:48%;
   border:black solid 2px;
-  /* margin:1% 0 1%; */
-  /* margin-left:1%; */
-  /* margin-right:-2px;*/
-  /* box-shadow: 0px 0px 10px 1px green; */
   margin:5% 5% 0;
   padding:0 0 0;
 }
@@ -303,7 +239,6 @@ h3#status-note {
   grid-template-rows: 40% 40%;
   grid-template-columns: 40% 40%;
   padding: 10px;
-  /* display:flex; */
 }
 
 #gallery {
@@ -313,16 +248,11 @@ h3#status-note {
 }
 
 #gallery img {
-  /* margin:5% 5% 5%; */
-  /* display:flex; */
-  /* flex:1; */
   border:black solid 2px
 }
 
-/**************************[ AFTER CONTENT-BODY ]**************************/
-#filler-space {
-  height:300px;
-}
+/**************************[ AFTER MAIN ]**************************/
+
 
 footer {
   border-top:#FFC600 2px solid;
@@ -338,7 +268,6 @@ footer {
   display: inline-block;
   padding: .25em 5px 5px;
   background: white;
-  /* color: #black; */
 }
 
 #footer-grid{
@@ -360,19 +289,15 @@ footer h2{
 }
 
 #contact {grid-area:contact;
-  /* background-color:white; */
+
 
 }
 
 #message {grid-area:message;
   width:400px;
-  /* background-color:red; */
 }
 
-#brand {grid-area:brand;
-  /* background-color:black; */
-  
-}
+#brand {grid-area:brand;}
 
 #faux-copyright {
   text-align:center;
@@ -388,23 +313,18 @@ footer h2{
   .bg {
     background:none;
   }
-  .header {
+  header {
     width:100vw;
     margin:0 0 0;
     padding:none;
     border:none;
   }
 
-   #content-body {
-    margin:none;
+   main {
     width:100vw;
-    /* padding:0 0% 50px; */
-    margin:0 0 0;
    }
    .container-column {
     
-    /* min-width:21vw; */
-    /* max-width:21vw; */
   }
 
   /* MAIN CONTENT GRID SYSTEM */
@@ -413,15 +333,10 @@ footer h2{
     background-color: #A2D6F9;
   }
   .center {grid-area:center;
-    /* min-width:46vw; */
-    /* max-width:46vw; */
-    /* font-size: ; */
+
   }
   .right {grid-area:right;
     /* max-width:25%; */
-  }
-  #filler-space {
-    display:none;
   }
   footer {
     display:none;
