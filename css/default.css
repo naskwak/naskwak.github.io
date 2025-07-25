@@ -54,9 +54,8 @@ header {
   text-align: center;
   border: 5px, none, #072AC8;
   border-style:double;
-  
-
   margin:2% 10vw 0;
+  overflow:hidden;
 }
 
 #title-graphic > img {
@@ -107,16 +106,14 @@ img#title-center{
 /**************************[ CONTENT BODY ]**************************/
 
 main /*GRID-CONTAINER*/ {
+  overflow:hidden;
   display:grid;
   grid-template-areas:
-    "left left center center center right right"
+    "left center center center right right"
   ;
- 
-
-  margin:1.5% 10vw 50px;
-
+  margin:0 10vw 50px;
   box-shadow: 0px 0px 10px 1px white;
-  
+  border:solid 2px rgb(55, 5, 54);
 }
 
 
@@ -134,19 +131,27 @@ main /*GRID-CONTAINER*/ {
   /* background-color:blue; */
 }
 
-.container-column p {
+.container-column p, ul {
   color:hsl(229, 91%, 71%);
   /* width:100%; */
-  margin:0px 40px 0px;
+  margin:0px 2em 0;
   /* background-color:red; */
 }
 
+ul {
+  padding:0;
+}
+
 .container-column h1, h2 {
-  padding:0px 30px 0px;
+  padding:0px 1em 0px;
+  margin:0;
+  margin:1em 0 0;
 }
 
 .container-column h3, h4, h5, h6 {
-  padding:0px 35px 0px;
+  font-size:large;
+  padding:0px 1.5em 0px;
+  margin:2em 0 0;
 }
 
 .container-column img {
@@ -157,8 +162,8 @@ main /*GRID-CONTAINER*/ {
 /* children of .container-column */
 .container-column.left {grid-area:left;
 
-  padding: 7px 0 0;
-  background-color: #A2D6F9;
+  /* padding: 7px 0 0; */
+  background-color: #ffecca;
   min-width:100%;
 }
 .container-column.center {grid-area:center;
@@ -166,13 +171,16 @@ main /*GRID-CONTAINER*/ {
 }
 .container-column.right {grid-area:right;
   min-width:100%;
-  
-  border-left:3px dotted;
+  border-left:1px dotted;
 }
 
 /**************************[ LEFT COLUMN CONTENT ]**************************/
 #navigation ul{
-  list-style:none;
+  color:black;
+  list-style:decimal;
+}
+a {
+  /* text-decoration:none; */
 }
 
 
@@ -184,9 +192,9 @@ main /*GRID-CONTAINER*/ {
   color: black;
 }
 #log {
-  border-top:solid #072AC8;
-  border-bottom:solid #072AC8;
-  background-color: #F3F0CC;
+  /* border-top:solid #072AC8; */
+  /* border-bottom:solid #072AC8; */
+  background-color: #ffd711;
   
 }
 
@@ -209,16 +217,18 @@ h3#status-note {
 }
 #a-space {
   /* background-color:black; */
+  display:flex;
+  flex-flow:column;
 }
-
+/* 
 #a-space > #first-row {
   display:flex;
-}
+} */
 
-#a-space > #first-row > img {
+#a-space > img {
   float:right;
   
-  min-width:48%;
+  min-width:90%;
   max-width:48%;
   border:black solid 2px;
   margin:5% 5% 0;
@@ -322,8 +332,11 @@ footer h2{
 
    main {
     width:100vw;
+    margin:0 0 0;
+    padding:none;
+    border:none;
    }
-   .container-column {
+  .container-column {
     
   }
 
