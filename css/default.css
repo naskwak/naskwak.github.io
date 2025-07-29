@@ -100,7 +100,7 @@ img#title-center{
   background-color:beige;
 }
 
-.buttonz {
+marquee img {
   padding:8px 0 6px;
   height:31px;
   margin:0px;
@@ -178,6 +178,25 @@ section.right {grid-area:right;
   /* z-index: -10; */
 }
 
+.archive-header {
+  /* justify-self:center;  */
+  background: url("../res/imgs/sparkling-sea.JPG");
+  background-color:#ffc80075;
+  
+  background-blend-mode:screen;
+  border-radius:5px;
+  border:solid 1px black;
+
+  align-self: center;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black; 
+  color:yellow;
+  font-size:36pt;
+  /* box-shadow:0 0 15px 15px grey; */
+  /* transform: scaleX(01.5); */
+  margin:10px;
+}
+
 /**************************[ LEFT COLUMN CONTENT ]**************************/
 #navigation {
     background-color: #ffecca;
@@ -223,19 +242,16 @@ h3#status-note {
   display:flex;
   flex-flow:column;
 }
-/* 
-#a-space > #first-row {
-  display:flex;
-} */
 
-#a-space > img {
+#a-space > figure  {
   float:right;
   
   min-width:90%;
   max-width:48%;
-  border:black solid 2px;
-  margin:5% 5% 0;
-  padding:0 0 0;
+  /* border:black solid 1px; */
+  background-color:lightcyan;
+  margin:5% 2.5% 0;
+  padding:0 2.5% 0;
 }
 
 #a-space > a{
