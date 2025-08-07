@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
+    <!-- iframe chat -->
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
   </head>
   <body>
     <header>
@@ -84,8 +86,53 @@
           </ul>
           <br>
         </div> 
-        <img src="res/imgs/rei-gif.gif">
 
+        
+        <img src="res/imgs/rei-gif.gif">
+        <article id="log">
+            <div class="header">
+              <h2>Log</h2><button>collapse</button>
+            </div>
+            <p>
+              <br>
+              [Thu July 24 2025]
+              <br>
+              - I learned semantic HTML and am now burning this site down. 
+              <br>
+              <br>
+              [Sat Dec 21 2024]
+              <br>
+              - added a blog system! plus my first blog post
+              <br>
+              <br>
+              [Fri Dec 13 2024]
+              <br>
+              - added status "widget" at the top right, footer, vertical navigation, image gallery, and welcome message :D
+              <br>
+              <br>
+              [Fri Dec 6 2024]
+              <br>
+              - added the fake invitation ad on right column, created a banner for the header
+              <br>
+              <br>
+              [Tue Dec 3 2024]
+              <br>
+              - migrated the site over to github for easier organization.
+              <br>
+              <br>
+              [Fri Nov 22 2024]
+              <br>
+              - created "nask! wak!" title graphics, buttons, and basic web style
+              <br>
+              <br>
+              [Tue Nov 26 2024]
+              <br>
+              - messed around with scrolling background. turned off the button marquee because it was annoying me.
+            </p>
+            <a href="#head-body"><h5>back to top</h5></a>
+          
+        </article>
+       
         
       </section><section class="center">  
         <h1 class="archive-header">July 2025</h1>      
@@ -168,8 +215,19 @@
             Subnautica
             <img src="res/imgs/loading.gif">
           </h3>
-          <p style="color:rgba(255, 0, 0, 0.145)">this site pisses me tf off </p>
-            <figure>
+          <p style="color:rgba(255, 0, 0, 0.145)">this site pisses me tf off </p><br>
+          <!-- <article> -->
+          <!-- CHAT -->
+          <script>
+            chattable.initialize({
+              theme : "Tendo"
+            });
+          </script>
+          <iframe src='https://iframe.chat/embed?chat=undefined' id='chattable' frameborder='none'></iframe>
+
+        <!-- </article> -->
+
+          <figure>
             <img alt="birthday invitation advertisement" style="min-width:90%;" src="res/imgs/jolly-jamboree.jpeg">
 
               <figcaption>
@@ -194,49 +252,7 @@
         </div> -->
         
         
-        <article id="log">
-            <div class="header">
-              <h2>Log</h2><button>collapse</button>
-            </div>
-            <p>
-              <br>
-              [Thu July 24 2025]
-              <br>
-              - I learned semantic HTML and am now burning this site down. 
-              <br>
-              <br>
-              [Sat Dec 21 2024]
-              <br>
-              - added a blog system! plus my first blog post
-              <br>
-              <br>
-              [Fri Dec 13 2024]
-              <br>
-              - added status "widget" at the top right, footer, vertical navigation, image gallery, and welcome message :D
-              <br>
-              <br>
-              [Fri Dec 6 2024]
-              <br>
-              - added the fake invitation ad on right column, created a banner for the header
-              <br>
-              <br>
-              [Tue Dec 3 2024]
-              <br>
-              - migrated the site over to github for easier organization.
-              <br>
-              <br>
-              [Fri Nov 22 2024]
-              <br>
-              - created "nask! wak!" title graphics, buttons, and basic web style
-              <br>
-              <br>
-              [Tue Nov 26 2024]
-              <br>
-              - messed around with scrolling background. turned off the button marquee because it was annoying me.
-            </p>
-            <a href="#head-body"><h5>back to top</h5></a>
-          
-        </article>
+        
       </section>
     
     <!-- <div class="container" id="filler-space"></div> -->
